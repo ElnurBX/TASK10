@@ -1,0 +1,194 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+img{
+    height: 4rem;
+}
+
+
+.container{
+    min-height: 100vh;
+    max-height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 4rem auto 3em;
+}
+
+
+
+/* header */
+header{
+    padding: 0 1.5rem;
+    display: grid;
+    grid-template-columns:15rem 10rem;
+    justify-content: space-between;
+    border-bottom: 1px solid #d8d8d8;
+}
+header .header__logo{
+    align-items: center; 
+    display: grid;
+    grid-template-columns:15% 80% ;
+    gap: 5%;
+}
+header .header__logo img{
+    height: 2rem;
+}
+.header__profils{
+    display: grid;
+    align-items: center;
+    gap:10px ;
+    grid-template-columns: auto auto auto;
+
+}
+.header__profils img{
+    border-radius: 50%;
+    height: 3em;
+}
+/* main */
+main{
+    padding:  1.5rem;
+    display: grid;
+    grid-template-rows: 1fr 12fr;
+    gap: 10px;
+}
+main .cards__head{
+    align-items: center;
+    justify-content: start;
+    display: grid;
+    grid-template-columns: 7rem  6rem;
+    color: #007bff;
+    gap: 20px;  
+    font-weight: 600;
+}
+
+.cards__head i{
+    margin-right: 10px;
+}
+
+.cards__cont{
+    
+    display: grid;
+    grid-template-rows: 15rem 15rem;
+    grid-template-columns: 14rem  14rem    14rem   14rem   14rem;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+
+.cards__cont__card{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-rows: 5fr 7fr 3fr;
+
+}
+.cards__cont__card__img{
+    background-image: url(https://www.gstatic.com/classroom/themes/img_reachout.jpg);
+    background-size: cover;
+    padding: 1rem 0 0 1rem;
+    border-radius: 1rem 1rem 0 0;
+    color: #ffffff;
+}
+.cards__cont__card__buttons{
+    border-top: 1px solid rgb(188, 188, 188);
+    padding: 1rem;
+    border-radius: 0 0 1rem 1rem;
+    text-align: right;
+}
+.cards__cont__card__buttons a{
+    margin-left: 10px;
+    color: #282828;
+}
+/* footer */
+footer{
+
+    
+    padding: 0 10px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: calc(calc(100% / 12 * 11));
+}
+
+.question{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    color: rgb(48, 48, 48);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(48, 48, 48) ;
+}
+
+
+
+
+
+
+/*resposivlik */
+@media only screen and (max-width:1400px){
+
+    .cards__cont{
+    
+        display: grid;
+        grid-template-rows: 15rem 15rem;
+        grid-template-columns: 14rem  14rem    14rem   14rem   14rem;
+        gap: 20px;
+        justify-content: space-evenly;
+    }
+}
+@media only screen and (max-width:1200px){
+
+    .cards__cont{
+    
+        display: grid;
+        grid-template-rows: 14rem 14rem;
+        grid-template-columns: 14rem  14rem    14rem   14rem  ;
+        gap: 20px;
+        justify-content: space-evenly;
+    }
+}
+@media only screen and (max-width:992px){
+
+    .cards__cont{
+    
+        display: grid;
+        grid-template-rows: 15rem 15rem;
+        grid-template-columns: 14rem  14rem    14rem  ;
+        gap: 20px;
+        justify-content: space-evenly;
+    }
+}
+@media only screen and (max-width:768px){
+
+    .cards__cont{
+    
+        display: grid;
+        grid-template-rows: 15rem 15rem;
+        grid-template-columns: 14rem  14rem  ;
+        gap: 20px;
+        justify-content: space-evenly;
+    }
+}
+
+@media only screen and (max-width:576px){
+    .header__profils{
+        justify-content: end;
+    }
+    .header__profils .dots{
+        display: none;
+    }
+    .header__profils img{
+        display: none;
+    }
+    .cards__cont{
+    
+        display: grid;
+        grid-template-rows: 15rem 15rem;
+        grid-template-columns: 14rem ;
+        gap: 20px;
+        justify-content: space-evenly;
+    }
+}
